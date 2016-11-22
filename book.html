@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<title>Dubai - Book Tickets</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+.fullscreen-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+}
+.fullscreen-bg__video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+	.fullscreen-bg__video {
+		height: 300%;
+		top: -100%;
+	}
+}
+@media (max-aspect-ratio: 16/9) {
+	.fullscreen-bg__video {
+		width: 300%;
+		left: -100%;
+	}
+}
+@media (max-width: 767px) {
+	.fullscreen-bg {
+		background: url('../img/videoframe.jpg') center center / cover no-repeat;
+	}
+	.fullscreen-bg__video {
+		display: none;
+	}
+}
+	</style>
+</head>
+
+<body>
+	<div id="particles-js"></div>
+	<div class="fullscreen-bg">
+		<video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+			<source src="video/dubai.mp4" type="video/mp4">
+		</video>
+	</div>
+	<center>
+		<nav class="nav">
+			<input type="checkbox" class="nav__cb" id="menu-cb" />
+			<div class="nav__content">
+				<ul class="nav__items">
+					<li class="nav__item">
+						<a href="index.html"><span class="nav__item-text">
+                        Homepage
+                        </span></a>
+					</li>
+					<li class="nav__item">
+						<a href="tourism.html"><span class="nav__item-text">
+                        Tourism
+                        </span></a>
+					</li>
+					<li class="nav__item">
+						<a href="dine.html"><span class="nav__item-text">
+                        Restaurants
+                        </span></a>
+					</li>
+					<li class="nav__item">
+						<a href="shop.html"><span class="nav__item-text">
+                        Shops
+                        </span></a>
+					</li>
+					<li class="nav__item">
+						<a href="hotels.html"><span class="nav__item-text">
+                        Hotels
+                        </span></a>
+					</li>
+				</ul>
+			</div>
+			<label class="nav__btn" for="menu-cb"></label>
+		</nav>
+		<!--<div class="contact"></div>-->
+		<div id="form-main">
+			<div id="form-div">
+				<table>
+					<form class="form" action="mailto:perves@mohammed.com" method="post">
+						<tr>
+							<td>
+								<h2>Flight type</h2>
+								<p>
+									<div class="left">
+										<input type="radio" name="radio" id="radio1" class="radio" checked/>
+										<label for="radio1">Roundtrip</label>
+									</div>
+								</p>
+								<div class="right">
+									<input type="radio" name="radio" id="radio2" class="radio" />
+									<label for="radio2">One way</label>
+								</div>
+								<div class="margin"></div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="name">
+									<h2>Fly from </h2>
+									<input name="name" list="destinations" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+									placeholder="Airport or city" id="plane" />
+									<datalist id="destinations">
+										<option value="Toronto">
+										<option value="Montreal">
+										<option value="Vancouver">
+										<option value="Quebec">
+										<option value="Kitchener">
+									</datalist>
+								</p>
+							</td>
+							<td>
+								<p class="plane">
+									<h2>To </h2>
+									<input name="name" list="destinations" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+									placeholder="Airport or city" id="plane" />
+									<datalist id="destinations">
+										<option value="Toronto">
+										<option value="Montreal">
+										<option value="Vancouver">
+										<option value="Quebec">
+										<option value="Kitchener">
+									</datalist>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="depart">
+									<h2>Depart </h2>
+									<input name="depart" type="date" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+									id="date" />
+								</p>
+							</td>
+							<td>
+								<p class="return">
+									<h2>Return </h2>
+									<input name="r" type="date" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+									id="date" />
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>
+									<h2>Adults (18+) </h2>
+									<select class="feedback-input" id="adult">
+										<option value="volvo">1</option>
+										<option value="saab">2</option>
+										<option value="mercedes">3</option>
+										<option value="audi">4</option>
+										<option value="mercedes">5</option>
+										<option value="audi">6</option>
+									</select>
+								</p>
+							</td>
+							<td>
+								<p>
+									<h2>Children (0-17) </h2>
+									<select class="feedback-input" id="child">
+										<option value="volvo">1</option>
+										<option value="saab">2</option>
+										<option value="mercedes">3</option>
+										<option value="audi">4</option>
+										<option value="mercedes">5</option>
+										<option value="audi">6</option>
+									</select>
+								</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<p>
+									<div class="margin"></div>
+									<div class="submit">
+										<input type="submit" value="Book Tickets" id="button-blue" />
+										<div class="ease">
+										</div>
+								</p>
+							</td>
+						</tr>
+					</form>
+				</table>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="map">
+				<a href="#popup1" title="Contact Us" id="pin">
+				<div class='pin'></div></a>
+				<div class='pulse'></div>
+			</div>
+			<div id="contact">
+				<div class="contact">
+				<p id="contact-text">
+					<a href="index.html" title="Homepage">Homepage</a> |
+					<a href="http://www.dubai.com/booking/privacy_policy/" title="Privacy Policy" target="_blank">Privacy Policy</a> |
+					<a href="https://en.wikipedia.org/wiki/Dubai" title="About" target="_blank">About</a> |
+					<a href="http://www.visitdubai.com/en/department-of-tourism_new/about-dtcm/legislation/dtcm-brand-guidelines" title="TOS" target="_blank">Terms of Services</a>
+				</p>
+			</div>
+			</div>
+		</div>
+		<div id="popup1" class="overlay">
+					<div class="popup">
+						<a class="close" href="#">×</a>
+						<div id="wrap">
+							<h1>Contact Us</h1>
+							<hr>
+							<br>
+							<div id='form_wrap'>
+								<form>
+									<p for="email" id="label1">Message : </p>
+									<textarea  name="message" value="Your Message" id="message" ></textarea>
+									<p for="name" id="label1">Name: </p>
+									<input type="text" name="name" value="" id="name" />
+									<p for="email" id="label1">Email: </p>
+									<input type="text" name="email" value="" id="email" />
+									<input type="submit" name ="submit" value="Send" />
+								</form>
+							</div>
+						</div>
+					<div id="address">
+						<hr>
+						<p id="addy">
+							1 Mohammed R Boulevard <br>
+							Downtown Dubai <br>
+							Dubai, UAE <br>
+							Within UAE: 800 BURJ <br>
+							International: +9714 8888888
+						</p>
+						<hr>
+					</div>
+					<div id="phone">
+						<hr>
+						<p id="addy">
+							P.O.Box 9440 <br>
+							Dubai <br>
+							United Arab Emirates <br>
+							Tel +971 4 367 3333 <br>
+							Fax +971 4 367 3000
+						</p>
+						<hr>
+						<div class="center">
+							<details>
+							  <summary>Copyright &copy; 2015</summary>
+							  <p>by mPCorp&trade; All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script language="javascript">
+			document.onmousedown = disableclick;
+			status = "LOLS Right Click Disabled! Open in text editor :) - Perves M";
+
+			function disableclick(event) {
+				if (event.button == 2) {
+					alert(status);
+					return false;
+					}
+				}
+		</script>
+		<script src="js/sketch.js"></script>
+		<script>
+
+		// ----------------------------------------
+		// Particle
+		// ----------------------------------------
+
+		function Particle( x, y, radius ) {
+			this.init( x, y, radius );
+		}
+
+		Particle.prototype = {
+
+			init: function( x, y, radius ) {
+
+				this.alive = true;
+
+				this.radius = radius || 10;
+				this.wander = 0.15;
+				this.theta = random( TWO_PI );
+				this.drag = 0.92;
+				this.color = '#fff';
+
+				this.x = x || 0.0;
+				this.y = y || 0.0;
+
+				this.vx = 0.0;
+				this.vy = 0.0;
+			},
+
+			move: function() {
+
+				this.x += this.vx;
+				this.y += this.vy;
+
+				this.vx *= this.drag;
+				this.vy *= this.drag;
+
+				this.theta += random( -0.5, 0.5 ) * this.wander;
+				this.vx += sin( this.theta ) * 0.1;
+				this.vy += cos( this.theta ) * 0.1;
+
+				this.radius *= 0.96;
+				this.alive = this.radius > 0.5;
+			},
+
+			draw: function( ctx ) {
+
+				ctx.beginPath();
+				ctx.arc( this.x, this.y, this.radius, 0, TWO_PI );
+				ctx.fillStyle = this.color;
+				ctx.fill();
+			}
+		};
+
+		// ----------------------------------------
+		// Example
+		// ----------------------------------------
+
+		var MAX_PARTICLES = 280;
+		var COLOURS = [ '#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423' ];
+
+		var particles = [];
+		var pool = [];
+
+		var demo = Sketch.create({
+			container: document.getElementById( 'container' )
+		});
+
+		demo.setup = function() {
+
+			// Set off some initial particles.
+			var i, x, y;
+
+			for ( i = 0; i < 20; i++ ) {
+				x = ( demo.width * 0.5 ) + random( -100, 100 );
+				y = ( demo.height * 0.5 ) + random( -100, 100 );
+				demo.spawn( x, y );
+			}
+		};
+
+		demo.spawn = function( x, y ) {
+
+			if ( particles.length >= MAX_PARTICLES )
+				pool.push( particles.shift() );
+
+			particle = pool.length ? pool.pop() : new Particle();
+			particle.init( x, y, random( 5, 40 ) );
+
+			particle.wander = random( 0.5, 2.0 );
+			particle.color = random( COLOURS );
+			particle.drag = random( 0.9, 0.99 );
+
+			theta = random( TWO_PI );
+			force = random( 2, 8 );
+
+			particle.vx = sin( theta ) * force;
+			particle.vy = cos( theta ) * force;
+
+			particles.push( particle );
+		};
+
+		demo.update = function() {
+
+			var i, particle;
+
+			for ( i = particles.length - 1; i >= 0; i-- ) {
+
+				particle = particles[i];
+
+				if ( particle.alive ) particle.move();
+				else pool.push( particles.splice( i, 1 )[0] );
+			}
+		};
+
+		demo.draw = function() {
+
+			demo.globalCompositeOperation  = 'lighter';
+
+			for ( var i = particles.length - 1; i >= 0; i-- ) {
+				particles[i].draw( demo );
+			}
+		};
+
+		demo.mousemove = function() {
+
+			var particle, theta, force, touch, max, i, j, n;
+
+			for ( i = 0, n = demo.touches.length; i < n; i++ ) {
+
+				touch = demo.touches[i], max = random( 1, 4 );
+				for ( j = 0; j < max; j++ ) {
+				  demo.spawn( touch.x, touch.y );
+				}
+
+			}
+		};
+
+		</script>
+	</body>
+</html>
